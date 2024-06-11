@@ -55,11 +55,13 @@ label {
   font-weight: bold;
 }
 
-input:hover, textarea:hover {
+input:hover,
+textarea:hover {
   border-color: #dcdfe6;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border-color: #f06449;
 }
 
@@ -76,6 +78,7 @@ input:focus, textarea:focus {
 }
 
 .click {
+  cursor: pointer;
   transform: all 300ms ease;
 }
 
@@ -265,7 +268,7 @@ nav {
 /*
 
 Modal Section
-
+su
 */
 
 .modal {
@@ -384,13 +387,12 @@ Modal Section
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: -1;
 }
 
 .modal__overlay--loading {
   background-color: #242424;
   font-size: 80px;
-  z-index: -1;
-
 }
 
 .modal__overlay--success {
@@ -401,8 +403,12 @@ Modal Section
   padding: 28px;
 }
 
+.modal__overlay--visible {
+  z-index: 1;
+}
+
 .fa-spinner {
-animation: spinner 750ms infinite linear;
+  animation: spinner 750ms infinite linear;
 }
 
 @keyframes spinner {
@@ -421,7 +427,6 @@ animation: spinner 750ms infinite linear;
   color: #fff;
   font-size: 36px;
   z-index: 100;
-
 }
 /*
 
