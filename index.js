@@ -1,7 +1,3 @@
-// template_uvtfft2
-// service_4jmgxz3
-// 982p7mGRS4PRHcotF
-
 function contact(event) {
   event.preventDefault();
   const loading = document.querySelector(".modal__overlay--loading");
@@ -25,4 +21,14 @@ function contact(event) {
         "The email service is temporarily unavailable. Please contact me directly on benjamineric2005@gmail.com"
       );
     });
+}
+
+let isModalOpen = false;
+function toggleModal() {
+  if (isModalOpen) {
+    isModalOpen = false;
+    return document.body.classList.remove("modal--open");
+  }
+  isModalOpen = !isModalOpen;
+  document.body.classList += " modal--open";
 }
