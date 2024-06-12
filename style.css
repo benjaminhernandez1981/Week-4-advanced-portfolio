@@ -300,7 +300,6 @@ Modal Section
   flex-direction: column;
   justify-content: center;
   position: relative;
-  transition: all 300ms ease-in;
 }
 
 .modal--open .modal__about,
