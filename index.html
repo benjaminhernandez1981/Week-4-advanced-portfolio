@@ -9,7 +9,7 @@
       src="https://kit.fontawesome.com/c8e4d183c2.js"
       crossorigin="anonymous"
     ></script>
-    <script src="index.js"></script>
+    <script src="app.js"></script>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       (function () {
         emailjs.init({
-          publicKey: "Y982p7mGRS4PRHcotF",
+          publicKey: "982p7mGRS4PRHcotF",
         });
       })();
     </script>
@@ -40,7 +40,6 @@
               >About</a
             >
           </li>
-
           <li class="nav__link">
             <a
               href="#"
@@ -48,7 +47,6 @@
               >Project</a
             >
           </li>
-
           <li class="nav__link">
             <a
               href="#"
@@ -89,13 +87,13 @@
               class="social__link click"
             >
               <i class="fab fa-github"></i>
-              </a>
-              <a
-                href="./assets/BHResumeSAISDSup.docx.pdf"
-                target="_blank"
-                class="social__link click"
-              >
-                <i class="fas fa-file-pdf"></i>
+            </a>
+            <a
+              href="./assets/BHResumeSAISDSup.docx.pdf"
+              target="_blank"
+              class="social__link click"
+            >
+              <i class="fas fa-file-pdf"></i>
             </a>
           </div>
         </div>
@@ -162,23 +160,23 @@
           <h4 class="modal__sub-title modal__sub-title--contact">
             I'm currently open to new opportunities.
           </h4>
-          <form id="contact__form" onsubmit="contact(event)"></form>
+          <form id="contact__form" onsubmit="contact(event)">
             <div class="form__item">
               <label class="form__item--label">Name</label>
-              <input class="input" name="user_name" type="text">
+              <input class="input" name="user_name" type="text" />
+            </div>
             <div class="form__item">
               <label class="form__item--label">Email</label>
-              <input class="input" name="user_email" type="email">
+              <input class="input" name="user_email" type="email" />
             </div>
             <div class="form__item">
               <label class="form__item--label">Message</label>
-              <textarea class="input" name="message" type="text">
-              </textarea>
+              <textarea class="input" name="message"></textarea>
             </div>
             <button id="contact__submit" class="form__submit">
               Send it my way
             </button>
-         
+          </form>
           <div class="modal__overlay modal__overlay--loading">
             <i class="fas fa-spinner"></i>
           </div>
