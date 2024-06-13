@@ -1,12 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-
-/* Generic Section */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 li {
@@ -31,8 +33,7 @@ section {
   transition: all 300ms ease;
 }
 
-input,
-textarea {
+input, textarea {
   width: 100%;
   background-color: #242424;
   color: #fff;
@@ -56,13 +57,11 @@ label {
   font-weight: bold;
 }
 
-input:hover,
-textarea:hover {
+input:hover, textarea:hover {
   border-color: #dcdfe6;
 }
 
-input:focus,
-textarea:focus {
+input:focus, textarea:focus {
   border-color: #f06449;
 }
 
@@ -80,7 +79,7 @@ textarea:focus {
 
 .click {
   cursor: pointer;
-  transform: all 300ms ease;
+  transition: all 300ms ease;
 }
 
 .click:hover {
@@ -92,7 +91,7 @@ textarea:focus {
 }
 
 .title {
-  font-size: 90px;
+  font-size: 120px;
   margin-bottom: 12px;
   text-align: left;
   line-height: 1;
@@ -113,7 +112,6 @@ textarea:focus {
   height: 3px;
   width: 0;
   right: 0;
-  background-color: black;
   transition: all 300ms ease;
 }
 
@@ -131,10 +129,11 @@ textarea:focus {
 }
 
 nav,
-.scroll .header {
+.scroll,
+.header {
   opacity: 1;
   visibility: visible;
-  transition: all 400ms;
+  transition: all 600ms 800ms;
 }
 
 .modal--open nav,
@@ -142,7 +141,7 @@ nav,
 .modal--open .header {
   opacity: 0;
   visibility: hidden;
-  transition: all 400ms 200ms;
+  transition: all 400ms;
 }
 
 .dark-theme .title,
@@ -150,7 +149,8 @@ nav,
 .dark-theme .section__sub-title,
 .dark-theme .nav__link--anchor,
 .dark-theme .fa-adjust,
-.dark-theme .header__para {
+.dark-theme .header__para
+{
   color: white;
 }
 .dark-theme section {
@@ -170,12 +170,11 @@ nav,
   background-color: white;
   color: #242424;
 }
-/*
+/* 
 
-Landing Page
-
+  LANDING PAGE 
+  
 */
-
 #landing-page {
   min-height: 100vh;
 }
@@ -260,16 +259,16 @@ Landing Page
   0% {
     transform: translateY(3px);
   }
-
+  
   100% {
     transform: translateY(-3px);
   }
 }
 
-/*
+/* 
 
-Navigation
-
+  NAVIGATION 
+  
 */
 
 nav {
@@ -285,8 +284,9 @@ nav {
 
 #personal-logo {
   width: 90px;
-  height: 50px;
-  filter: invert(i);
+  height: 60px;
+  filter: invert(1);
+  
 }
 
 .nav__link--list {
@@ -298,7 +298,6 @@ nav {
 }
 
 .nav__link--anchor {
-  text-decoration: none;
   font-size: 16px;
   color: #242424;
   font-weight: 700;
@@ -308,12 +307,11 @@ nav {
   font-size: 20px;
 }
 
-/*
+/* 
 
-Modal Section
-
+  MODAL 
+  
 */
-
 .modal {
   position: absolute;
   top: 50%;
@@ -327,15 +325,13 @@ Modal Section
   display: flex;
   visibility: hidden;
   z-index: -1;
-  transition: visibility 1s z-index 1s, box-shadow 0.5s ease;
+  transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
 }
-
-.modal--open .modal {
+.modal--open .modal{
   z-index: 60;
   box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
   visibility: visible;
 }
-
 .modal__half {
   width: 50%;
   padding: 40px 72px;
@@ -347,7 +343,8 @@ Modal Section
 }
 
 .modal--open .modal__about,
-.modal--open .modal__contact {
+.modal--open .modal__contact
+{
   transform: translateX(0%);
 }
 
@@ -392,9 +389,9 @@ Modal Section
 }
 
 .modal__contact {
+  transform: translateX(110%);
   background-color: #242424;
   color: white;
-  transform: translateX(110%);
 }
 
 .modal__title {
@@ -419,7 +416,7 @@ Modal Section
   background-color: #f06449;
   border: 2px solid #f06449;
   color: white;
-  font-weight: bold;
+  font-weight: 700;
   width: 100%;
   max-width: 240px;
   padding: 12px 24px;
@@ -475,6 +472,7 @@ Modal Section
   0% {
     transform: rotate(0);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -488,29 +486,25 @@ Modal Section
   font-size: 36px;
   z-index: 100;
 }
-/*
+/* 
 
-Projects Section
-
+  PROJECTS 
+  
 */
 
 .section__title {
   text-align: center;
   font-size: 48px;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
+}
+
+.project {
+  margin-bottom: 130px;
 }
 
 .project__img {
   width: 100%;
   transition: all 600ms ease;
-  
-  
-  
-  }
-
-.project:hover .project__img {
-  transform: scale(1.07);
-  filter: blur(5px);
 }
 
 .project__wrapper {
@@ -542,7 +536,8 @@ Projects Section
 }
 
 .project__wrapper:hover .project__wrapper--bg {
-  opacity: 0.7;
+  opacity: 0.7; 
+  visibility: visible;
 }
 
 .project__wrapper--bg {
@@ -552,8 +547,9 @@ Projects Section
   width: 100%;
   height: 100%;
   background-color: #1c1d25;
-  opacity: 0;
+  opacity: 0; 
   transition: all 450ms ease;
+  visibility: hidden;
 }
 
 .project__description--title {
@@ -561,7 +557,7 @@ Projects Section
 }
 
 .project__description--sub-title {
-  margin: 8px;
+  margin-top: 8px;
 }
 
 .project__description--link {
@@ -574,17 +570,17 @@ Projects Section
   margin: 16px 0;
 }
 
-/*
+/* 
 
-    Footer
-
-    */
+  FOOTER 
+  
+*/
 
 footer {
   position: relative;
   background-color: #242424;
   display: flex;
-  padding: 6%, 0;
+  padding: 6% 0;
 }
 
 .footer__row {
@@ -594,8 +590,7 @@ footer {
 }
 
 .footer__logo--img {
-  width: 90px;
-  height: 50px;
+  width: 75px;
 }
 
 .footer__social--list {
@@ -611,32 +606,32 @@ footer {
   color: white;
 }
 
-/*
+/* 
 
-Shapes Section
+  SHAPES
 
-shapes on the first row 
-height = 15vh
+  shapes on the first row 
+  height = 15vh
+  
+  shapes on the second row 
+  height = 50vh
+  
+  shapes on the third row 
+  height = 80vh
 
-shapes on the second row
-height = 50vh
+  shapes on the first column
+  width = 5vw
+  
+  shapes on the second column
+  width = 50vw
 
-shapes on the third row
-height = 80vh
+  shapes on the third column
+  width = 80vw
 
-shapes on the first column
-width = 5vw
-
-shapes on the second column
-width = 50vw
-
-shapes on the third column
-width = 80vh
 */
 .shape {
   position: fixed;
 }
-
 .shape--0 {
   top: 15vh;
   left: 5vw;
@@ -674,6 +669,26 @@ width = 80vh
   left: 80vw;
 }
 
+/* ADDED AFTER TUTORIAL */
+.footer__logo--popper {
+  position: absolute;
+  right: 0;
+  top: 16px;
+  font-weight: 700;
+  opacity: 0;
+  transition: all 300ms ease;
+  color: white;
+}
+
+.footer__anchor {
+  position: relative;
+}
+
+.footer__anchor:hover .footer__logo--popper {
+  transform: translateX(60px);
+  opacity: 1;
+}
+
 /* Small phones, tablets, large smart phones */
 @media (max-width: 768px) {
   .title {
@@ -691,13 +706,12 @@ width = 80vh
     flex-direction: column-reverse;
     border-radius: 0;
   }
-
   .modal__half {
     width: 100%;
   }
 }
 
-/*Just small phones */
+/* Small phones */
 @media (max-width: 480px) {
   .title {
     font-size: 52px;
@@ -709,7 +723,7 @@ width = 80vh
     display: none;
   }
   .project__description--para {
-display: none;
+    display: none;
   }
   .project__description {
     left: 0;
