@@ -38,11 +38,14 @@ function contact(event) {
     .then(() => {
       loading.classList.remove("modal__overlay--visible");
       success.classList += " modal__overlay--visible";
+      setTimeout(() => {
+        location.reload();
+      }, 3000);
     })
     .catch(() => {
       loading.classList.remove("modal__overlay--visible");
       alert(
-        " The email service is temporarly unavailable. Please contact me directly on benjamineric2005@gmail.com"
+        "The email service is temporarily unavailable. Please contact me directly at benjamineric2005@gmail.com"
       );
     });
 }
